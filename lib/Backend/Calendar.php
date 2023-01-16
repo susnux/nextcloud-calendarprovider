@@ -61,7 +61,7 @@ class Calendar implements ICalendar, ICreateFromString {
 		$event = null;
 		try {
 			$event = $this->mapper->findByName($name);
-		} catch (DoesNotExistException) {
+		} catch (DoesNotExistException $_) {
 			$event = new Event();
 			$event->setFilename($name);
 			$event->setUserId($this->user->getUID());
@@ -99,7 +99,7 @@ class Calendar implements ICalendar, ICreateFromString {
 					$result[] = $this->mapper->find($pattern);
 				}
 			}
-		} catch (DoesNotExistException) {
+		} catch (DoesNotExistException $_) {
 			return [];
 		}
 
