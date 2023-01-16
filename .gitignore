@@ -1,0 +1,10 @@
+.idea
+*.iml
+
+/vendor/
+/build/
+
+js/*
+templates/*
+
+/.php-cs-fixer.cache
